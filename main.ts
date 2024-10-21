@@ -8,7 +8,7 @@ const BotToken: string = Deno.env.get("BOT_TOKEN")!;
 // ボットの作成
 const bot = createBot({
     token: BotToken,
-    botId: getBotIdFromToken(BotToken),
+    botId: getBotIdFromToken(BotToken) as bigint,
 
     // イベント発火時に実行する関数など
     events: {
